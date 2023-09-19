@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <h1>Média geral</h1>
+    <h3> 
+    Nome:<div id = "nome"></div>
+    Professor:<div id = "prof"></div>
+    primeira nota:<div id = "nota1"></div>
+    segunda nota:<div id = "nota2"></div>
+    terceira nota:<div id = "nota3"></div>
+    Resultado:<div id = "resultado"></div>
+    </h3>
+
+    <script>
+        let nome =  prompt ("Digite seu nome");
+        let prof = prompt ("Digite do seu professor");
+        let nota1 = Number (prompt("Digite sua primeira nota"));
+        let nota2 = Number (prompt("Digite sua segunda nota"));
+        let nota3 = Number (prompt("Digite sua terceira nota"));
+        let resultado =" ";
+
+        media = (nota1+nota2+nota3)/3;
+
+        if (media<4) {
+        resultado ="reprovado"
+        } else if (media <6) {
+        resultado ="retido"    
+        } else if (media <11) {
+        resultado = "aprovado"    
+        } else {
+        resultado= "valor invalido"        
+        }
+            
+
+        document.getElementById("resultado").innerHTML = resultado;
+        document.getElementById("nome").innerHTML = nome;
+        document.getElementById("prof").innerHTML = prof;
+        document.getElementById("nota1").innerHTML = nota1;   
+        document.getElementById("nota2").innerHTML = nota2; 
+        document.getElementById("nota3").innerHTML = nota3;    
+    </script>
+</body>
+</html>
